@@ -92,7 +92,7 @@ io.on('connection', (socket) => {
   app.post('/upload', async (req, res) => {
     const { magnetLink } = req.body;
     const driveService = await authenticateDrive();
-    const folderId = '1RGIKcijsbO_gl5cAndAY2w3LEHPbrfrh'; // Your folder ID
+    const folderId = ''; // Your folder ID
 
     try {
         res.json({ success: true, message: 'Upload started' });
@@ -206,7 +206,7 @@ async function uploadFileWithProgress(driveService, file, folderId, io) {
 async function main() {
     const driveService = await authenticateDrive();
     const magnetLink = 'magnet:?xt=urn:btih:357E332E385E41815DC6DF1A815775BFDF753F77&dn=The+Lightning+Seeds+-+Tomorrow%26%23039%3Bs+Here+Today+%282024%29320mp3&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.demonii.com%3A1337%2Fannounce&tr=udp%3A%2F%2Fopen.stealth.si%3A80%2Fannounce&tr=udp%3A%2F%2Finferno.demonoid.is%3A3391%2Fannounce&tr=udp%3A%2F%2Ftracker-udp.gbitt.info%3A80%2Fannounce&tr=udp%3A%2F%2Ftracker.opentrackr.org%3A1337%2Fannounce&tr=http%3A%2F%2Ftracker.openbittorrent.com%3A80%2Fannounce&tr=udp%3A%2F%2Fopentracker.i2p.rocks%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.internetwarriors.net%3A1337%2Fannounce&tr=udp%3A%2F%2Ftracker.leechers-paradise.org%3A6969%2Fannounce&tr=udp%3A%2F%2Fcoppersurfer.tk%3A6969%2Fannounce&tr=udp%3A%2F%2Ftracker.zer0day.to%3A1337%2Fannounce';
-    const folderId = '1RGIKcijsbO_gl5cAndAY2w3LEHPbrfrh'; // Your folder ID
+    const folderId = ''; // Your folder ID
 
     try {
         // Start the torrent download and upload directly to Google Drive
